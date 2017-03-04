@@ -15,8 +15,8 @@ require('./bootstrap');
 
 // Import Vue-Plugins
 
-
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('login', require('./components/auth/Login.vue'))
+Vue.component('example', require('./components/Example.vue'))
 
 const app = new Vue({
     el: '#app'

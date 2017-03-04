@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-md-8">
             <example></example>
+            <login></login>
         </div>
     </div>
 </div>

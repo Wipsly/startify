@@ -25,4 +25,13 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function test(Request $request)
+    {
+        $this->validate($request, [
+            'username' => 'required',
+        ]);
+
+        return $request->username;
+    }
 }

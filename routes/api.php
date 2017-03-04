@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/test', 'HomeController@test')->middleware('auth:api');
+/*
+Route::middleware('auth:api')->post('/test', function (Request $request) {
+    $name = $request->input('username');
+    return $name;
+});
+*/
