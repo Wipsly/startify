@@ -13,10 +13,8 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Import Vue-Plugins
-
-Vue.component('login', require('./components/auth/Login.vue'))
-Vue.component('example', require('./components/Example.vue'))
+Vue.component('test', require('./components/templates/Test.vue'))
+Vue.component('example', require('./components/templates/Example.vue'))
 
 const app = new Vue({
     el: '#app'
