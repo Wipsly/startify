@@ -55,17 +55,7 @@
                                     <a class="active" href="start_backend.html"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">Dashboard</span></a>
                                 </li>
                                 <li class="nav-main-heading"><span class="sidebar-mini-hide">Header</span></li>
-                                <li>
-                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-wrench"></i><span class="sidebar-mini-hide">Dropdown</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="start_backend.html">Link #1</a>
-                                        </li>
-                                        <li>
-                                            <a href="start_backend.html">Link #2</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <router-link to="example"><i class="si si-target"></i><span class="sidebar-mini-hide">Example</span></router-link>
                             </ul>
                         </div>
                         <!-- END Side Content -->
@@ -121,17 +111,6 @@
                 <!-- END Page Content -->
             </main>
             <!-- END Main Container -->
-
-            <!-- Footer -->
-            <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
-                <div class="pull-right">
-                    Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
-                </div>
-                <div class="pull-left">
-                    <a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">OneUI</a> &copy; <span class="js-year-copy"></span>
-                </div>
-            </footer>
-            <!-- END Footer -->
         </div>
         <!-- END Page Container -->
     </div>
