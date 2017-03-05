@@ -20,7 +20,7 @@
                                     <has-error :form="form" field="username"></has-error>
                                 </div>
                             </div>
-                            <!-- End Form Field Username -->
+                            <!-- End Form Fil
 
                             <!-- Begin Form Submit -->
                             <div class="form-group">
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+    import Vue from 'vue'
     import { Form, HasError, AlertError, AlertSuccess } from 'vform'
 
     Vue.component('has-error', HasError)

@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/app/{vue_capture?}', function () {
+    return view('home');
+})->where('vue_capture', '[\/\w\.-]*')->middleware('auth');
+
+

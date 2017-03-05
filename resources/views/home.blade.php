@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <test></test>
+            <router-view></router-view>
         </div>
     </div>
 </div>
