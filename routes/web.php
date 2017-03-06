@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/{vue_capture?}', function () {
-    return view('home');
+    return view('layouts.landing');
 })->where('vue_capture', '[\/\w\.-]*')->middleware('auth');
 
 

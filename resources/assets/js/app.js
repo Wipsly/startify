@@ -15,10 +15,9 @@ require('./bootstrap');
 
 import router from './router'
 
-/*
-Vue.component('test', require('./components/templates/Test.vue'))
-Vue.component('example', require('./components/templates/Example.vue'))
-*/
+
+Vue.component('app', require('./components/layouts/App.vue'))
+
 
 const app = new Vue({
     el: '#app',

@@ -5,16 +5,22 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     mode: 'history',
+    linkActiveClass: 'active',
     routes: [
         {
-            path: '/test',
-            name: 'test',
-            component: require('./components/templates/Test.vue')
+            path: '/dashboard',
+            name: 'dashboard',
+            component: require('./components/dashboard/Dashboard.vue')
         },
         {
-            path: '/example',
-            name: 'example',
-            component: require('./components/templates/Example.vue')
+            path: '/form',
+            name: 'form',
+            component: require('./components/templates/Form.vue')
+        },
+        {
+            path: '/user',
+            name: 'user',
+            component: require('./components/templates/User.vue')
         }
     ]
 })
