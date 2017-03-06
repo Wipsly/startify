@@ -4,7 +4,9 @@
 
         <!-- Page Content -->
         <div class="content">
-            <router-view></router-view>
+            <transition name="fade" mode="out-in" :duration="300">
+                <router-view></router-view>
+            </transition>
         </div>
         <!-- END Page Content -->
     </main>

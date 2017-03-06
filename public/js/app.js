@@ -41380,7 +41380,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "content"
-  }, [_c('router-view')], 1)])
+  }, [_c('transition', {
+    attrs: {
+      "name": "fade",
+      "mode": "out-in",
+      "duration": 300
+    }
+  }, [_c('router-view')], 1)], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
