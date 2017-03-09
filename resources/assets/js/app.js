@@ -3,8 +3,10 @@ require('./bootstrap');
 
 // Import Plugins
 import VueStash from 'vue-stash'
+import VueSweetAlert  from 'vue-sweetalert'
 // Use Plugins
 Vue.use(VueStash)
+Vue.use(VueSweetAlert)
 
 // Import Router
 import router from './router'
