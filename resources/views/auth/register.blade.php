@@ -32,12 +32,12 @@
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
                                         <input class="form-control" type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Please enter a username">
+                                        <label for="name">Username</label>
                                         @if ($errors->has('name'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('name') }}</strong>
                                             </span>
                                         @endif
-                                        <label for="name">Username</label>
                                     </div>
                                 </div>
                             </div>
@@ -45,12 +45,12 @@
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
                                         <input class="form-control" type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Please provide your email">
+                                        <label for="email">Email</label>
                                         @if ($errors->has('email'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('email') }}</strong>
                                             </span>
                                         @endif
-                                        <label for="email">Email</label>
                                     </div>
                                 </div>
                             </div>
@@ -59,12 +59,12 @@
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
                                         <input class="form-control" type="password" id="password" name="password" placeholder="Choose a strong password..">
+                                        <label for="password">Password</label>
                                         @if ($errors->has('password'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('password') }}</strong>
                                             </span>
                                         @endif
-                                        <label for="password">Password</label>
                                     </div>
                                 </div>
                             </div>

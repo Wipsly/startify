@@ -31,12 +31,12 @@
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-primary floating">
                                         <input class="form-control" type="email" name="email" value="{{ old('email') }}">
+                                        <label for="email">Email</label>
                                         @if ($errors->has('email'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('email') }}</strong>
                                             </span>
                                         @endif
-                                        <label for="email">Email</label>
                                     </div>
                                 </div>
                             </div>
@@ -44,12 +44,12 @@
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-primary floating">
                                         <input id="password" type="password" class="form-control" name="password">
+                                        <label for="email">Password</label>
                                         @if ($errors->has('password'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('password') }}</strong>
                                             </span>
                                         @endif
-                                        <label for="email">Password</label>
                                     </div>
                                 </div>
                             </div>

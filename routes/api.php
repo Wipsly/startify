@@ -18,6 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/test', 'HomeController@test')->middleware('auth:api');
+
+Route::get('/getAuthUser', 'HomeController@getAuthUser')->middleware('auth:api');
+
 /*
 Route::middleware('auth:api')->post('/test', function (Request $request) {
     $name = $request->input('username');

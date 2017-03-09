@@ -31,6 +31,32 @@
             </li>
         </ul>
         <!-- END Header Navigation Left -->
+        <!-- Header Navigation Right -->
+        <ul class="nav-header pull-right">
+            <li>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                        {{ $store.user.name }}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">Profile</li>
+                        <li>
+                            <a tabindex="-1" href="#">
+                                <i class="si si-settings pull-right"></i>Settings
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Actions</li>
+                        <li>
+                            <a tabindex="-1" href="base_pages_login.html">
+                                <i class="si si-logout pull-right"></i>Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </header>
     <!-- END Header -->
 </template>
