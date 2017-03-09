@@ -13,7 +13,7 @@
                                 <a href="#">View Terms</a>
                             </li>
                             <li>
-                                <a href="base_pages_login.html" data-toggle="tooltip" data-placement="left" title="Log In"><i class="si si-login"></i></a>
+                                <a href="{{ route('login') }}" data-toggle="tooltip" data-placement="left" title="Log In"><i class="si si-login"></i></a>
                             </li>
                         </ul>
                         <h3 class="block-title">Register</h3>
@@ -98,6 +98,4 @@
         </div>
     </div>
     <!-- END Register Content -->
-
-
 @endsection

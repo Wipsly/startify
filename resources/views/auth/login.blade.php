@@ -13,7 +13,7 @@
                                 <a href="{{ route('password.request') }}">Forgot Password?</a>
                             </li>
                             <li>
-                                <a href="base_pages_register.html" data-toggle="tooltip" data-placement="left" title="New Account"><i class="si si-plus"></i></a>
+                                <a href="{{ route('register') }}" data-toggle="tooltip" data-placement="left" title="New Account"><i class="si si-plus"></i></a>
                             </li>
                         </ul>
                         <h3 class="block-title">Login</h3>
@@ -74,5 +74,4 @@
         </div>
     </div>
     <!-- END Login Content -->
-
 @endsection

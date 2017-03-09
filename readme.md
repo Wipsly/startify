@@ -1,13 +1,12 @@
 ## Startify
 
-### Done
-    - Laravel Passport
 ### ToDo
-    - VueForm
-    - Authentication with Vue-Router implementation
+    - Auth Reset Password Layout
     - VueStash
     - VueEvents
-    - Implementing CoreUI
     
-### Notes
+### Done
+    - Laravel Passport
+    - VueForm
+    - Authentication with Vue-Router implementation
     
