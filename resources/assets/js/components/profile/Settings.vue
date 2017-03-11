@@ -1,7 +1,7 @@
 <template>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter">
-            <h3 class="block-title">Content</h3>
+            <h3 class="block-title">Personal</h3>
         </div>
         <div class="block-content">
             <!-- Begin Form -->
@@ -24,7 +24,7 @@
                 <!-- Begin Form Submit -->
                 <div class="form-group">
                     <div class="col-md-3 col-md-offset-1">
-                        <button type="submit" class="btn btn-primary">Test</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </div>
                 <!-- End Form Submit -->
@@ -57,6 +57,11 @@
                     .then(response => {
                         this.form.name = response.data.name;
                     });
+        },
+        methods: {
+            updateUserPersonal() {
+                this.form.post('/api/updateUserPersonal')
+            }
         }
     }
 </script>

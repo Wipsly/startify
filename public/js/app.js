@@ -11221,6 +11221,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/getAuthUser').then(function (response) {
             _this.form.name = response.data.name;
         });
+    },
+
+    methods: {
+        updateUserPersonal: function updateUserPersonal() {
+            this.form.post('/api/updateUserPersonal');
+        }
     }
 };
 
@@ -39159,7 +39165,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "block-header bg-gray-lighter"
   }, [_c('h3', {
     staticClass: "block-title"
-  }, [_vm._v("Content")])])
+  }, [_vm._v("Personal")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "form-group"
@@ -39170,7 +39176,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "submit"
     }
-  }, [_vm._v("Test")])])])
+  }, [_vm._v("Update")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
