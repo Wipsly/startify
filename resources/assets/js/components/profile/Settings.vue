@@ -5,7 +5,7 @@
         </div>
         <div class="block-content">
             <!-- Begin Form -->
-            <form @submit.prevent="login" @keydown="form.errors.clear($event.target.name)" class="form-horizontal">
+            <form @submit.prevent="updateUserPersonal" @keydown="form.errors.clear($event.target.name)" class="form-horizontal">
                 <!-- Begin Alerts -->
                 <alert-error :form="form"></alert-error>
                 <alert-success :form="form" message="Success!"></alert-success>
