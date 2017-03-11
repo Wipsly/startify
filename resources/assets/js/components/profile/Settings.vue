@@ -1,10 +1,9 @@
 <template>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter">
-            <h3 class="block-title">Example</h3>
+            <h3 class="block-title">Content</h3>
         </div>
         <div class="block-content">
-
             <!-- Begin Form -->
             <form @submit.prevent="login" @keydown="form.errors.clear($event.target.name)" class="form-horizontal">
                 <!-- Begin Alerts -->
@@ -12,15 +11,15 @@
                 <alert-success :form="form" message="Success!"></alert-success>
                 <!-- End Alerts -->
 
-                <!-- Begin Form Field Username -->
-                <div class="form-group" :class="{ 'has-error': form.errors.has('username') }">
-                    <label for="username" class="col-md-1 control-label">Username</label>
+                <!-- Begin Form Field Name -->
+                <div class="form-group" :class="{ 'has-error': form.errors.has('name') }">
+                    <label for="name" class="col-md-1 control-label">Name</label>
                     <div class="col-md-10">
-                        <input v-model="form.username" type="text" name="username" id="username" class="form-control">
-                        <has-error :form="form" field="username"></has-error>
+                        <input v-model="form.name" type="text" name="form.name" id="name" class="form-control">
+                        <has-error :form="form" field="name"></has-error>
                     </div>
                 </div>
-                <!-- End Form Field Username -->
+                <!-- End Form Field Name -->
 
                 <!-- Begin Form Submit -->
                 <div class="form-group">
@@ -49,15 +48,15 @@
         data() {
             return {
                 form: new Form({
-                    username: null
+                    name: null
                 })
             }
         },
-        methods: {
-            login() {
-               this.form.post('/api/test')
-                       .then(({ data }) => { console.log(data) })
-            }
+        mounted() {
+            axios.get('/api/getAuthUser')
+                    .then(response => {
+                        this.form.name = response.data.name;
+                    });
         }
     }
 </script>

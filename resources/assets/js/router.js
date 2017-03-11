@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from './store'
 
 Vue.use(VueRouter)
 
@@ -21,8 +22,33 @@ const router = new VueRouter({
             path: '/user',
             name: 'user',
             component: require('./components/templates/User.vue')
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: require('./components/profile/Profile.vue'),
+            children: [
+                {
+                    path: 'settings',
+                    name: 'profile-settings',
+                    component: require('./components/profile/Settings.vue')
+                },
+                {
+                    path: 'security',
+                    name: 'security-settings',
+                    component: require('./components/profile/Security.vue')
+                },
+            ]
         }
     ]
+})
+
+router.beforeEach((to, from, next) => {
+    if (store.user.name)
+        console.log('User is known')
+    else
+        console.log('User not set')
+    next();
 })
 
 export default router

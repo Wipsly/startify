@@ -42,9 +42,7 @@
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li class="dropdown-header">Profile</li>
                         <li>
-                            <a tabindex="-1" href="#">
-                                <i class="si si-settings pull-right"></i>Settings
-                            </a>
+                            </i><router-link :to="{ name: 'profile-settings' }"><i class="si si-settings pull-right"></i>Settings</router-link>
                         </li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Actions</li>
@@ -60,3 +58,4 @@
     </header>
     <!-- END Header -->
 </template>
+

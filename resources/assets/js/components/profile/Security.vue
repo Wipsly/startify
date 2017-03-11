@@ -1,10 +1,10 @@
 <template>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter">
-            <h3 class="block-title">User</h3>
+            <h3 class="block-title">Security</h3>
         </div>
         <div class="block-content">
-            <p>{{ this.$store.user.name }}</p>
+            <p>Security</p>
         </div>
     </div>
 </template>

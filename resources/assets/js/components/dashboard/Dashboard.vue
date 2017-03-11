@@ -10,12 +10,5 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            axios.get('/api/getAuthUser')
-                    .then(response => {
-                        this.$store.user.name = response.data.name;
-                    });
-        }
-    }
+
 </script>

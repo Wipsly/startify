@@ -20,11 +20,11 @@
                 <div class="side-content">
                     <ul class="nav-main">
                         <li>
-                            <router-link to="dashboard"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">Dashboard</span></router-link>
+                            <router-link :to="{ name: 'dashboard' }"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">Dashboard</span></router-link>
                         </li>
                         <li class="nav-main-heading"><span class="sidebar-mini-hide">Templates</span></li>
-                        <router-link to="user"><i class="si si-user"></i><span class="sidebar-mini-hide">User</span></router-link>
-                        <router-link to="form"><i class="si si-note"></i><span class="sidebar-mini-hide">Form</span></router-link>
+                        <router-link :to="{ name: 'user' }"><i class="si si-user"></i><span class="sidebar-mini-hide">User</span></router-link>
+                        <router-link :to="{ name: 'form' }"><i class="si si-note"></i><span class="sidebar-mini-hide">Form</span></router-link>
                     </ul>
                 </div>
                 <!-- END Side Content -->
