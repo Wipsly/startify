@@ -8,7 +8,7 @@
             <form @submit.prevent="updateUserPersonal" @keydown="form.errors.clear($event.target.name)" class="form-horizontal">
                 <!-- Begin Alerts -->
                 <alert-error :form="form"></alert-error>
-                <alert-success :form="form" message="Success!"></alert-success>
+                <alert-success :form="form" message="Your name has been updated."></alert-success>
                 <!-- End Alerts -->
 
                 <!-- Begin Form Field Name -->
@@ -24,7 +24,11 @@
                 <!-- Begin Form Submit -->
                 <div class="form-group">
                     <div class="col-md-3 col-md-offset-1">
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button :disabled="form.busy" type="submit" class="btn btn-primary">
+                            <i v-if="form.busy" class="fa fa-fw fa-spinner fa-spin"></i>
+                            <i v-else class="si si-refresh push-4-r"></i>
+                            Update
+                        </button>
                     </div>
                 </div>
                 <!-- End Form Submit -->
@@ -61,7 +65,8 @@
         methods: {
             updateUserPersonal() {
                 this.form.post('/api/updateUserPersonal')
-                this.$events.fire('updateUserPersonal', this.form.name);
+                if (this.form.name)
+                    this.$events.fire('updateUserPersonal', this.form.name)
             }
         }
     }

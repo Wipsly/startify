@@ -11206,6 +11206,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -11234,7 +11238,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         updateUserPersonal: function updateUserPersonal() {
             this.form.post('/api/updateUserPersonal');
-            this.$events.fire('updateUserPersonal', this.form.name);
+            if (this.form.name) this.$events.fire('updateUserPersonal', this.form.name);
         }
     }
 };
@@ -39126,7 +39130,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('alert-success', {
     attrs: {
       "form": _vm.form,
-      "message": "Success!"
+      "message": "Your name has been updated."
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "form-group",
@@ -39167,24 +39171,27 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "form": _vm.form,
       "field": "name"
     }
-  })], 1)]), _vm._v(" "), _vm._m(1)], 1)])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "block-header bg-gray-lighter"
-  }, [_c('h3', {
-    staticClass: "block-title"
-  }, [_vm._v("Personal")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })], 1)]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
   }, [_c('div', {
     staticClass: "col-md-3 col-md-offset-1"
   }, [_c('button', {
     staticClass: "btn btn-primary",
     attrs: {
+      "disabled": _vm.form.busy,
       "type": "submit"
     }
-  }, [_vm._v("Update")])])])
+  }, [(_vm.form.busy) ? _c('i', {
+    staticClass: "fa fa-fw fa-spinner fa-spin"
+  }) : _c('i', {
+    staticClass: "si si-refresh push-4-r"
+  }), _vm._v("\n                        Update\n                    ")])])])], 1)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "block-header bg-gray-lighter"
+  }, [_c('h3', {
+    staticClass: "block-title"
+  }, [_vm._v("Personal")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
