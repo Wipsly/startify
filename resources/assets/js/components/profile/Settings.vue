@@ -61,6 +61,7 @@
         methods: {
             updateUserPersonal() {
                 this.form.post('/api/updateUserPersonal')
+                this.$events.fire('updateUserPersonal', this.form.name);
             }
         }
     }

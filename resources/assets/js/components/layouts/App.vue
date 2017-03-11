@@ -18,6 +18,9 @@
             AppContent
         },
         mounted() {
+            this.$events.listen('updateUserPersonal', form => (
+                this.$store.user.name = form)
+            );
             axios.get('/api/getAuthUser')
                     .then(response => {
                         this.$store.user.name = response.data.name;
