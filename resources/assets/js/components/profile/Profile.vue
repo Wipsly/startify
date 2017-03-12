@@ -9,7 +9,7 @@
                     </div>
                     <div class="block-content">
                         <ul class="nav nav-pills nav-stacked push">
-                            <router-link tag="li" :to="{ name: 'profile-settings' }">
+                            <router-link tag="li" :to="{ name: 'personal-settings' }">
                                 <a><i class="si si-user push-5-r"></i> Personal</span></a>
                             </router-link>
                             <router-link tag="li" :to="{ name: 'security-settings' }">

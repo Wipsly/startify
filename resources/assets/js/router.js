@@ -30,8 +30,8 @@ const router = new VueRouter({
             children: [
                 {
                     path: 'settings',
-                    name: 'profile-settings',
-                    component: require('./components/profile/Settings.vue')
+                    name: 'personal-settings',
+                    component: require('./components/profile/Personal.vue')
                 },
                 {
                     path: 'security',

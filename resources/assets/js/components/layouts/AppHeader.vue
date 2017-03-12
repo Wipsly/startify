@@ -42,12 +42,12 @@
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li class="dropdown-header">Profile</li>
                         <li>
-                            </i><router-link :to="{ name: 'profile-settings' }"><i class="si si-settings pull-right"></i>Settings</router-link>
+                            </i><router-link :to="{ name: 'personal-settings' }"><i class="si si-settings pull-right"></i>Settings</router-link>
                         </li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Actions</li>
                         <li>
-                            <a tabindex="-1" href="base_pages_login.html">
+                            <a tabindex="-1" href="/logout">
                                 <i class="si si-logout pull-right"></i>Log out
                             </a>
                         </li>
