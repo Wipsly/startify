@@ -14,22 +14,12 @@ const router = new VueRouter({
             component: require('./components/dashboard/Dashboard.vue')
         },
         {
-            path: '/form',
-            name: 'form',
-            component: require('./components/templates/Form.vue')
-        },
-        {
-            path: '/user',
-            name: 'user',
-            component: require('./components/templates/User.vue')
-        },
-        {
             path: '/profile',
             name: 'profile',
             component: require('./components/profile/Profile.vue'),
             children: [
                 {
-                    path: 'settings',
+                    path: 'personal',
                     name: 'personal-settings',
                     component: require('./components/profile/Personal.vue')
                 },

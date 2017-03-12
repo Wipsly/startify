@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 class SettingController extends Controller
 {
+    // Update User Personal
     public function updateUserPersonal(Request $request)
     {
         $this->validate($request, [
@@ -16,9 +17,21 @@ class SettingController extends Controller
         ]);
 
         $user = User::findOrFail(Auth::user());
-
         $user->name = $request->input('name');
+        $user->save();
 
+        return $user;
+    }
+
+    // Update User Security
+    public function updateUserSecurity(Request $request)
+    {
+        $this->validate($request, [
+            'password' => 'required|min:6|confirmed'
+        ]);
+
+        $user = User::findOrFail(Auth::user());
+        $user->password = bcrypt($request->input('password'));
         $user->save();
 
         return $user;
