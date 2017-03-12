@@ -9,6 +9,14 @@ use App\Http\Controllers\Controller;
 
 class SettingController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     // Update User Personal
     public function updateUserPersonal(Request $request)
     {

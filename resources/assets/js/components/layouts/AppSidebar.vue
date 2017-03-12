@@ -23,7 +23,7 @@
                             <router-link :to="{ name: 'dashboard' }"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">Dashboard</span></router-link>
                         </li>
                         <li class="nav-main-heading"><span class="sidebar-mini-hide">Administration</span></li>
-                        <router-link :to="{ name: 'personal-settings' }"><i class="si si-users"></i><span class="sidebar-mini-hide">Users</span></router-link>
+                        <router-link :to="{ name: 'admin-users-overview' }"><i class="si si-users"></i><span class="sidebar-mini-hide">Users</span></router-link>
                     </ul>
                 </div>
                 <!-- END Side Content -->

@@ -17,6 +17,7 @@ Route::post('/updateUserPersonal', 'Profile\SettingController@updateUserPersonal
 Route::post('/updateUserSecurity', 'Profile\SettingController@updateUserSecurity')->middleware('auth:api');
 
 Route::get('/getAuthUser', 'HomeController@getAuthUser')->middleware('auth:api');
+Route::get('/getAllUsers', 'Admin\UserController@getAllUsers')->middleware('auth:api');
 
 /*
 Route::middleware('auth:api')->post('/test', function (Request $request) {

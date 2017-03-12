@@ -14,6 +14,18 @@ const router = new VueRouter({
             component: require('./components/dashboard/Dashboard.vue')
         },
         {
+            path: '/admin/users',
+            name: 'admin-users',
+            component: require('./components/admin/users/Users.vue'),
+            children: [
+                {
+                    path: 'overview',
+                    name: 'admin-users-overview',
+                    component: require('./components/admin/users/Overview.vue')
+                }
+            ]
+        },
+        {
             path: '/profile',
             name: 'profile',
             component: require('./components/profile/Profile.vue'),
@@ -27,7 +39,7 @@ const router = new VueRouter({
                     path: 'security',
                     name: 'security-settings',
                     component: require('./components/profile/Security.vue')
-                },
+                }
             ]
         }
     ]
