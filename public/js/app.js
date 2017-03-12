@@ -32645,15 +32645,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = {
     data: function data() {
         return {
-            columns: ['id', 'name'],
-            users: null
+            columns: ['id', 'name', 'email'],
+            users: null,
+            ready: false
         };
     },
     mounted: function mounted() {
@@ -32661,6 +32659,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         axios.get('/api/getAllUsers').then(function (response) {
             _this.users = response.data;
+            _this.ready = true;
             console.log(response.data);
         });
     }
@@ -56875,21 +56874,21 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "block block-bordered"
-  }, [_c('div', {
-    staticClass: "block-header bg-gray-lighter"
-  }, [_c('h3', {
-    staticClass: "block-title"
-  }, [_vm._v("Overview")]), _vm._v(" "), _c('ul', _vm._l((_vm.users), function(user) {
-    return _c('li', [_vm._v(_vm._s(user.name))])
-  }))]), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "block-content"
-  }, [_c('v-client-table', {
+  }, [(_vm.ready) ? _c('v-client-table', {
     attrs: {
       "data": _vm.users,
       "columns": _vm.columns
     }
-  })], 1)])
-},staticRenderFns: []}
+  }) : _vm._e()], 1)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "block-header bg-gray-lighter"
+  }, [_c('h3', {
+    staticClass: "block-title"
+  }, [_vm._v("Overview")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
