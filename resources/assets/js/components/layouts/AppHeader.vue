@@ -22,9 +22,9 @@
                 </button>
             </li>
             <li class="js-header-search header-search">
-                <form class="form-horizontal" action="#" method="post">
+                <form class="form-horizontal" action="" @submit.prevent="send">
                     <div class="form-material form-material-primary input-group remove-margin-t remove-margin-b">
-                        <input class="form-control" type="text" id="base-material-text" name="base-material-text" placeholder="Search..">
+                        <input class="form-control" type="text" id="users" name="base-material-text" placeholder="Search...">
                         <span class="input-group-addon"><i class="si si-magnifier"></i></span>
                     </div>
                 </form>
@@ -58,4 +58,28 @@
     </header>
     <!-- END Header -->
 </template>
+
+<script>
+    import autocomplete from 'autocomplete.js'
+    import algolia from 'algoliasearch'
+    export default {
+        mounted () {
+            const index = algolia('ZMMFBCVWN4', '1c90e614a2397df5b647c95cf3801280').initIndex('users')
+
+            autocomplete('#users', {
+                hint: true
+            }, {
+                source: autocomplete.sources.hits(index, { hitsPerPage: 10 }),
+                displayKey: 'name',
+                templates: {
+                    suggestion (suggestion) {
+                        return '<span>' + suggestion._highlightResult.name.value + '</span>';
+                    },
+                    empty: '<div class="aa-empty">No people found</div>'
+                }
+            })
+
+        }
+    }
+</script>
 
