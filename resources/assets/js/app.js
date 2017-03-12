@@ -5,11 +5,13 @@ require('./bootstrap');
 import VueStash from 'vue-stash'
 import VueSweetAlert  from 'vue-sweetalert'
 import VueEvents from 'vue-events'
+import { ClientTable, Event } from 'vue-tables-2';
 
 // Use Plugins
 Vue.use(VueStash)
 Vue.use(VueSweetAlert)
 Vue.use(VueEvents)
+Vue.use(ClientTable)
 
 // Import Router
 import router from './router'

@@ -20,6 +20,7 @@
     "vue-router": "^2.3.0",
     "vue-stash": "^2.0.1-beta",
     "vue-sweetalert": "^0.1.17",
+    "vue-tables-2": "^0.4.54",
     "vue2-animate": "^1.0.4"
   }
 }
