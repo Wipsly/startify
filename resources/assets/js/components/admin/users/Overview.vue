@@ -4,7 +4,7 @@
             <h3 class="block-title">Overview</h3>
         </div>
         <div class="block-content">
-            <v-client-table :data="users" :columns="columns" v-if="ready"></v-client-table>
+            <v-client-table :data="users" :columns="columns" :options="options" v-if="ready"></v-client-table>
         </div>
     </div>
 </template>
@@ -13,9 +13,22 @@
     export default {
         data() {
             return {
-                columns: ['id', 'name', 'email'],
                 users: null,
-                ready: false
+                ready: false,
+                columns: ['id', 'name', 'email', 'edit'],
+                options: {
+                    headings: {
+                        id: 'Number',
+                        name: 'Names',
+                        email: 'Email',
+                        edit: 'Action'
+                    },
+                    templates: {
+                        edit: function(row) {
+                            return "<a href='#!/${row.id}/edit'><i class='glyphicon glyphicon-edit'></i></a>"
+                        }
+                    }
+                }
             }
         },
         mounted() {

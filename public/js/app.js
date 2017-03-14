@@ -32649,9 +32649,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = {
     data: function data() {
         return {
-            columns: ['id', 'name', 'email'],
             users: null,
-            ready: false
+            ready: false,
+            columns: ['id', 'name', 'email', 'edit'],
+            options: {
+                headings: {
+                    id: 'Number',
+                    name: 'Names',
+                    email: 'Email',
+                    edit: 'Action'
+                },
+                templates: {
+                    edit: function edit(row) {
+                        return "<a href='#!/${row.id}/edit'><i class='glyphicon glyphicon-edit'></i></a>";
+                    }
+                }
+            }
         };
     },
     mounted: function mounted() {
@@ -56879,7 +56892,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [(_vm.ready) ? _c('v-client-table', {
     attrs: {
       "data": _vm.users,
-      "columns": _vm.columns
+      "columns": _vm.columns,
+      "options": _vm.options
     }
   }) : _vm._e()], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
